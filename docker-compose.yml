@@ -1,0 +1,8 @@
+services:
+  game-dashboard:
+    image: registry.lindstromhome.cc/game-dashboard:latest
+    restart: unless-stopped
+    ports:
+      - "3080:80"
+    volumes:
+      - ./data:/usr/share/nginx/html/data:ro
